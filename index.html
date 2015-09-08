@@ -18,7 +18,7 @@
         <!-- STEP 5: Get rid of the one above when you uncomment the below-->
           
         <input class="form-control" placeholder="Search Name" ng-model="friendFilter.name">
-        <input class="form-control" placeholder="Search Location" ng-model="friendFilter.current_location.$">
+        <input class="form-control" placeholder="Search Location" ng-model="locationFilter">
           
         <select class="input-medium" ng-model="orderProperty">
           <option value="name">Name</option>
@@ -37,7 +37,7 @@
     </form>
 <!--ng-repeat | filter:filterText
       //scope filterObject, filterObject.<propertyname></propertyname>-->
-    <ul ng-repeat="friend in friends | filter: friendFilter | orderBy: orderReverse + orderProperty">
+    <ul ng-repeat="friend in friends | filter: {name:friendFilter, current_location:locationFilter} | orderBy: orderReverse + orderProperty">
         <li class="friend" >
             <h3>{{friend.name}}</h3>
         </li>

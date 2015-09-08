@@ -48,3 +48,6 @@ We will also create a location search input.
 * ng-repeat http://jsfiddle.net/PhCUk/1/
 * Filter http://jsfiddle.net/WS8gS/1/
 * http://docs.angularjs.org/guide/concepts
+
+
+** Controller -- to display data on html page. 
